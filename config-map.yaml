@@ -102,5 +102,8 @@ spec:
     - containerPort: 80
   volumes:
   - name: myvol
-    ConfigMap:
+    configMap:
       name: web-conf
+      items:
+      - key: nginx.conf
+        path: nginx.conf
