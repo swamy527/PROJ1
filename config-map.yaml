@@ -95,7 +95,8 @@ spec:
   - name: web
     image: dockerswaha/web:k8
     volumeMounts:
-    - mountPath: /etc/nginx/
+    - mountPath: /etc/nginx/nginx.conf
+      subPath: nginx.conf
       name: myvol
     ports:
     - containerPort: 80
